@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلباتي - خدمة الطلبات السريعة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>طلباتي</h1>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#how">كيفية الطلب</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
+    </nav>
+</header>
+
+<section class="banner" id="home">
+    <h2>خدمة طلباتك بكل سهولة وسرعة</h2>
+    <p>من أي مكان وفي أي وقت</p>
+    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">اطلب الآن</button>
+</section>
+
+<section id="services">
+    <h2 class="section-title">خدماتنا</h2>
+    <div class="services">
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/restaurant.png" alt="مطاعم">
+            <h3>توصيل مطاعم</h3>
+            <p>اطلب من أفضل المطاعم واستلم طلبك بسرعة.</p>
+            <button>اطلب هذه الخدمة</button>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/grocery-bag.png" alt="بقالة">
+            <h3>توصيل بقالة</h3>
+            <p>كل ما تحتاجه من سوبرماركت يصل إليك بسهولة.</p>
+            <button>اطلب هذه الخدمة</button>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/pills.png" alt="أدوية">
+            <h3>توصيل أدوية</h3>
+            <p>خدمة سريعة لتوصيل الأدوية الضرورية إلى باب منزلك.</p>
+            <button>اطلب هذه الخدمة</button>
+        </div>
+    </div>
+</section>
+
+<section id="how">
+    <h2 class="section-title">كيفية الطلب</h2>
+    <div class="steps">
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/select.png" alt="اختر الخدمة">
+            <h3>اختر الخدمة</h3>
+            <p>حدد نوع الطلب الذي ترغب به بسهولة.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/order-history.png" alt="أضف التفاصيل">
+            <h3>أضف تفاصيل طلبك</h3>
+            <p>أدخل كل المعلومات الخاصة بطلبك بدقة.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/money.png" alt="الدفع">
+            <h3>اختر طريقة الدفع</h3>
+            <p>ادفع إلكترونياً أو عند الاستلام.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios-filled/100/000000/delivery.png" alt="استلام الطلب">
+            <h3>استلم طلبك</h3>
+            <p>استمتع بالسرعة والدقة في التوصيل.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">من نحن</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        خدمة "طلباتي" متخصصة في توصيل كل ما تحتاجه بسرعة واحترافية. هدفنا هو توفير الوقت والجهد لعملائنا من خلال تجربة سهلة وسريعة وآمنة. نسعى دائمًا لتقديم أفضل خدمة بأعلى جودة.
+    </p>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">تواصل معنا</h2>
+    <form>
+        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <textarea rows="5" placeholder="رسالتك" required></textarea>
+        <button type="submit" class="submit-btn">إرسال</button>
+    </form>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة © 2026 - طلباتي</p>
+</footer>
+
+</body>
+</html>
