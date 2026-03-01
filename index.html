@@ -20,6 +20,7 @@ button:hover{background:#b71c1c}
 </head>
 <body>
 
+<!-- تسجيل دخول -->
 <div class="container" id="loginPage">
 <h2>تسجيل دخول</h2>
 <input id="name" placeholder="الاسم">
@@ -28,6 +29,7 @@ button:hover{background:#b71c1c}
 <button onclick="login()">دخول</button>
 </div>
 
+<!-- صفحة الخدمات -->
 <div class="container hidden" id="mainPage">
 <h2>اختر المنتجات</h2>
 
@@ -69,12 +71,19 @@ other:["منظفات","مياه","عصائر","شيبس","بسكويت"]
 };
 
 function login(){
-const n=name.value,l=location.value,p=phone.value;
-if(!n||!l||!p){alert("يرجى ملء جميع الحقول");return;}
-user={n,l,p};
+const n=document.getElementById("name").value.trim();
+const l=document.getElementById("location").value.trim();
+const p=document.getElementById("phone").value.trim();
+
+if(n === "" || l === "" || p === ""){
+    alert("يرجى ملء جميع الحقول");
+    return;
+}
+
+user = {n,l,p};
 localStorage.setItem("user",JSON.stringify(user));
-loginPage.classList.add("hidden");
-mainPage.classList.remove("hidden");
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("mainPage").classList.remove("hidden");
 }
 
 function showProducts(){
@@ -119,11 +128,17 @@ window.onload=function(){
 let saved=localStorage.getItem("user");
 if(saved){
 user=JSON.parse(saved);
-loginPage.classList.add("hidden");
-mainPage.classList.remove("hidden");
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("mainPage").classList.remove("hidden");
 }
 }
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
